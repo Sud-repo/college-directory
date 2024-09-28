@@ -44,6 +44,9 @@ public class SecurityConfiguration {
 			try {
                 auth
                 .antMatchers("/api/v1/auth/**").permitAll()
+                .antMatchers("/student/**").hasAnyRole("STUDENT")
+                .antMatchers("/faculty/**").hasAnyRole("FACULTY_MEMBER")
+                .antMatchers("/admin/**").hasAnyRole("ADMINISTRATOR")
                   .anyRequest().authenticated()
                         .and()
                         .exceptionHandling(handling -> handling
