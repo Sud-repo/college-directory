@@ -10,4 +10,5 @@ import com.leucinetech.college_directory.core.model.Department;
 
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
+
 }

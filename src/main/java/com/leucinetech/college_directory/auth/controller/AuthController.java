@@ -2,6 +2,7 @@ package com.leucinetech.college_directory.auth.controller;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,11 +29,13 @@ public class AuthController {
 	 
 
 	@PostMapping(value = "/signin")
-	public ResponseEntity<Document<JwtAuthResponse>> authenticate(@RequestBody LoginDto loginDto, HttpServletResponse response) {
+	public ResponseEntity<Document<JwtAuthResponse>> authenticate(@RequestBody @Valid LoginDto loginDto, HttpServletResponse response) {
 		Document<JwtAuthResponse> result = authService.login(loginDto);
-		Cookie  cookie = new Cookie("jwtToken",(result.getData()).getAccessToken());
-		cookie.setPath("/");
-		response.addCookie(cookie);
+		if (result.getStatusCode() == 200) {
+			Cookie  cookie = new Cookie("jwtToken",(result.getData()).getAccessToken());
+			cookie.setPath("/");
+			response.addCookie(cookie);
+		}
 		return ResponseEntity
 				.status(result.getStatusCode())
 				.body(result);

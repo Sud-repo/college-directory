@@ -1,13 +1,20 @@
 package com.leucinetech.college_directory.auth.dto;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * @author Sudharshan
  */
 
 public class LoginDto {
 	
+	@NotBlank
 	private String username;
+	
+	@NotBlank
 	private String password;
+	
+	@NotBlank
 	private String role;
 	
 	public String getUsername() {
