@@ -2,22 +2,22 @@
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `name`, `email`, `phone`)
 VALUES 
     -- Students
-    (1, 'student1', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'STUDENT', 'John Doe', 'john.student@example.com', '1234567890'),
-    (4, 'student2', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'STUDENT', 'Alice Green', 'alice.student@example.com', '1234567891'),
-    (5, 'student3', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'STUDENT', 'Bob White', 'bob.student@example.com', '1234567892'),
-    (6, 'student4', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'STUDENT', 'Clara Black', 'clara.student@example.com', '1234567893'),
+    (1, 'student1', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'ROLE_STUDENT', 'John Doe', 'john.student@example.com', '1234567890'),
+    (4, 'student2', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'ROLE_STUDENT', 'Alice Green', 'alice.student@example.com', '1234567891'),
+    (5, 'student3', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'ROLE_STUDENT', 'Bob White', 'bob.student@example.com', '1234567892'),
+    (6, 'student4', '$2a$12$cZdzVQPb7x3CEq8hw5aJxOEqxjpaZs8NnBVDP7OC0qFaT4WRElEKq', 'ROLE_STUDENT', 'Clara Black', 'clara.student@example.com', '1234567893'),
 
     -- Faculty Members
-    (2, 'faculty1', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'FACULTY_MEMBER', 'Dr. Jane Smith', 'jane.faculty@example.com', '2345678901'),
-    (7, 'faculty2', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'FACULTY_MEMBER', 'Dr. Tom Hanks', 'tom.faculty@example.com', '2345678902'),
-    (8, 'faculty3', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'FACULTY_MEMBER', 'Dr. Sarah Lee', 'sarah.faculty@example.com', '2345678903'),
-    (9, 'faculty4', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'FACULTY_MEMBER', 'Dr. Robert Brown', 'robert.faculty@example.com', '2345678904'),
+    (2, 'faculty1', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'ROLE_FACULTY_MEMBER', 'Dr. Jane Smith', 'jane.faculty@example.com', '2345678901'),
+    (7, 'faculty2', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'ROLE_FACULTY_MEMBER', 'Dr. Tom Hanks', 'tom.faculty@example.com', '2345678902'),
+    (8, 'faculty3', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'ROLE_FACULTY_MEMBER', 'Dr. Sarah Lee', 'sarah.faculty@example.com', '2345678903'),
+    (9, 'faculty4', '$2a$12$2oirOAXbmCYtMF84Ixl4H.dt7XFw8JPc8N.9eXqs4ou3Mgpkp81AK', 'ROLE_FACULTY_MEMBER', 'Dr. Robert Brown', 'robert.faculty@example.com', '2345678904'),
 
     -- Administrators
-    (3, 'admin1', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ADMINISTRATOR', 'Mark Admin', 'mark.admin@example.com', '3456789012'),
-    (10, 'admin2', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ADMINISTRATOR', 'Lucy Admin', 'lucy.admin@example.com', '3456789013'),
-    (11, 'admin3', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ADMINISTRATOR', 'Jack Admin', 'jack.admin@example.com', '3456789014'),
-    (12, 'admin4', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ADMINISTRATOR', 'Emma Admin', 'emma.admin@example.com', '3456789015');
+    (3, 'admin1', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ROLE_ADMINISTRATOR', 'Mark Admin', 'mark.admin@example.com', '3456789012'),
+    (10, 'admin2', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ROLE_ADMINISTRATOR', 'Lucy Admin', 'lucy.admin@example.com', '3456789013'),
+    (11, 'admin3', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ROLE_ADMINISTRATOR', 'Jack Admin', 'jack.admin@example.com', '3456789014'),
+    (12, 'admin4', '$2a$12$rWJ9sMePg/XBKOhQhEC9l.9ZCTpQ37Bk2EzlUX6pZTq0k6olmyviy', 'ROLE_ADMINISTRATOR', 'Emma Admin', 'emma.admin@example.com', '3456789015');
 
 -- Insert student profiles
 INSERT INTO `studentprofile` (`user_id`, `photo`, `department_id`, `year`)

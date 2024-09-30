@@ -5,7 +5,7 @@ package com.leucinetech.college_directory.core.model.enums;
  */
 
 public enum Role {
-    STUDENT,
-    FACULTY_MEMBER,
-    ADMINISTRATOR
+	ROLE_STUDENT,
+	ROLE_FACULTY_MEMBER,
+	ROLE_ADMINISTRATOR
 }
