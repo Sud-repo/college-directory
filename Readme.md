@@ -1,1 +1,4 @@
-student123faculty123admin123
+Passwords:
+student - student123
+faculty - faculty123
+admin - admin123

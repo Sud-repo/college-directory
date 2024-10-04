@@ -43,7 +43,7 @@ public class SecurityConfiguration {
 		return http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth -> {
 			try {
                 auth
-                .antMatchers("/api/v1/auth/**").permitAll()
+                .antMatchers("/api/v1/auth/**", "/user-details/**").permitAll()
                 .antMatchers("/student/**").hasAnyRole("STUDENT")
                 .antMatchers("/faculty/**").hasAnyRole("FACULTY_MEMBER")
                 .antMatchers("/admin/**").hasAnyRole("ADMINISTRATOR")

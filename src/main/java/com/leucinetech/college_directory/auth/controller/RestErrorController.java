@@ -29,7 +29,7 @@ public class RestErrorController {
     public Map<String, String> handleInvalidArguments(MethodArgumentNotValidException ex) {
     	Map<String, String> errorMap = new HashMap<>();
     	ex.getBindingResult().getFieldErrors()
-    		.forEach(error -> errorMap.put(error.getField(), error.getDefaultMessage()));
+    		.forEach(error -> errorMap.put("message", error.getDefaultMessage()));
     	log.error("MethodArgumentNotValidException Occurred, Validation failed due to Invalid Input - Handling the Exception Response.");
     	return errorMap;
     }
