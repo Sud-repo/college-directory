@@ -10,4 +10,6 @@ import com.leucinetech.college_directory.user.model.UserDetail;
 
 public interface UserDetailRepository extends JpaRepository<UserDetail, Long>{
 
+	boolean existsByEmail(String email);
+
 }
